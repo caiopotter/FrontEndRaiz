@@ -7,6 +7,9 @@
 	overflow: hidden;
     background-color: #333;
     border-radius: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar i {
@@ -17,11 +20,11 @@
 	font-weight: bold;
 	background-color: #333;
 	color: white;
-  	text-decoration: none;
-    display: block;
-    float: left;
-    text-align: center;
-  	padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
 
 }
 
@@ -39,6 +42,8 @@
   .dropdown .dropbutton{
   	float:right;
     display: block;
+    top: 0;
+    position: fixed;
     padding: 14px 16px;
     background-color: #333;
   }
@@ -49,7 +54,7 @@
 
 @media screen and (min-width: 600px) {
   .dropdown {display: none;}
-  .dropdown .dropbutton{display: none;}
+  .dropdown .dropbutton {display: none;}
 
 }
 
@@ -70,12 +75,13 @@
 
 .dropdown .dropbutton{
 	display:block;
-    border: none;
-    background-color: #333;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 14px 16px;
-    float:right;
+  right:0;
+  border: none;
+  background-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 14px;
+  float:right;
 }
 
 .drop-content a{
@@ -90,7 +96,7 @@
 }
 
 .drop-content {
-  position: absolute;
+
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -99,10 +105,27 @@
 
 .dropdown {
   position: relative;
-
   float: right;
+  top: 0;
 
 }
+
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 
 </style>
 </head>
@@ -122,6 +145,13 @@
   		<a href="#">Contact</a>
   		<a href="#">About</a>
     </div>
+</div>
+
+<div class="parallax">
+
+</div>
+
+
 </div>
 
 </body>
