@@ -133,7 +133,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  margin-bottom: 10px
 }
 
 .centered {
@@ -162,11 +162,11 @@ body, html {
 }
 
 .column {
-  width: 30%;
+  width: 31%;
   background-color: gray;
   text-align:center;
   margin: 1%;
-  padding: 10px;
+
   float: left;
 }
 
@@ -176,7 +176,24 @@ img {
 }
 
 .column-text{
-  text-align:justify;
+  text-align:left;
+  padding: 10px;
+}
+
+.column-header{
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.column-button{
+  padding: 10px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  border-radius:5px;
+  border: none;
+  cursor: pointer;
+  color:white;
 }
 
 </style>
@@ -207,15 +224,28 @@ img {
 <div class="row">
   <div class="column">
     <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+    <div><h1 class="column-header" style="color:green;">Green Header</h1></div>
     <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+    <div>
+    <button class="column-button" style="background-color:green;">Green button</button>
+    </div>
   </div>
+
   <div class="column">
     <img src="http://h2oviva.com.br/wp-content/uploads/2019/03/badgleys-landscape-snohomish.jpg">
+    <div><h1 class="column-header" style="color:blue;">Blue Header</h1></div>
     <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+    <div>
+      <button class="column-button" style="background-color:blue;">Blue button</button>
+    </div>
   </div>
   <div class="column">
     <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
+    <div><h1 class="column-header" style="color:red;">Red Header</h1></div>
     <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+    <div>
+      <button class="column-button" style="background-color:red;">Red button</button>
+    </div>
   </div>
 </div>
 
