@@ -56,7 +56,7 @@
   .dropdown{
     display: inline-block;
   }
-  .row .column {
+  .row [class*="col-"] {
     width: 100%;
     float: left;
   }
@@ -161,14 +161,15 @@ body, html {
   text-decoration: underline;
 }
 
-.column {
-  width: 31%;
-  background-color: gray;
+[class*="col-"] {
+  background-color: #f1f1f1;
   text-align:center;
-  margin: 1%;
-
+  margin:1%;
   float: left;
 }
+
+.col-1 {width: 31%;}
+.col-2 {width: 48%;}
 
 img {
   width: 100%;
@@ -177,6 +178,11 @@ img {
 
 .column-text{
   text-align:left;
+  padding: 10px;
+}
+
+.column-2-text{
+  text-align:center;
   padding: 10px;
 }
 
@@ -196,58 +202,92 @@ img {
   color:white;
 }
 
+.column2{
+  background-color:white;
+  color:black;
+  float:right;
+  margin-right: 10px;
+  border-style:solid;
+  border-color:black;
+  border-width:1px;"
+
+}
+
+.column-2-header{
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
 </style>
 </head>
 <body>
-<div class="navbar">
-	<a href="#">News</a>
-  <a href="#">Contact</a>
-  <a href="#">About</a>
-</div>
-
-<div class="dropdown">
-	<button class="dropbutton"><i class="material-icons">list</i></button>
-    <div class="drop-content">
-      <a href="#">News</a>
-  		<a href="#">Contact</a>
-  		<a href="#">About</a>
-    </div>
-</div>
-
-<div class="parallax">
-  <div class="centered">
-    <h1>Conquer</h1>
-    <h2>Simple NO-Bootstrap Template</h2>
+  <div class="navbar">
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
   </div>
-</div>
 
-<div class="row">
-  <div class="column">
-    <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
-    <div><h1 class="column-header" style="color:green;">Green Header</h1></div>
-    <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-    <div>
-    <button class="column-button" style="background-color:green;">Green button</button>
+  <div class="dropdown">
+    <button class="dropbutton"><i class="material-icons">list</i></button>
+      <div class="drop-content">
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </div>
+  </div>
+
+  <div class="parallax">
+    <div class="centered">
+      <h1>Conquer</h1>
+      <h2>Simple NO-Bootstrap Template</h2>
     </div>
   </div>
 
-  <div class="column">
-    <img src="http://h2oviva.com.br/wp-content/uploads/2019/03/badgleys-landscape-snohomish.jpg">
-    <div><h1 class="column-header" style="color:blue;">Blue Header</h1></div>
-    <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-    <div>
-      <button class="column-button" style="background-color:blue;">Blue button</button>
+  <div class="row">
+    <div class="col-1">
+      <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+      <div><h1 class="column-header" style="color:green;">Green Header</h1></div>
+      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+      <div>
+      <button class="column-button" style="background-color:green;">Green button</button>
+      </div>
     </div>
-  </div>
-  <div class="column">
-    <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
-    <div><h1 class="column-header" style="color:red;">Red Header</h1></div>
-    <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-    <div>
-      <button class="column-button" style="background-color:red;">Red button</button>
-    </div>
-  </div>
-</div>
 
+    <div class="col-1">
+      <img src="http://h2oviva.com.br/wp-content/uploads/2019/03/badgleys-landscape-snohomish.jpg">
+      <div><h1 class="column-header" style="color:blue;">Blue Header</h1></div>
+      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+      <div>
+        <button class="column-button" style="background-color:blue;">Blue button</button>
+      </div>
+    </div>
+    <div class="col-1">
+      <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
+      <div><h1 class="column-header" style="color:red;">Red Header</h1></div>
+      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+      <div>
+        <button class="column-button" style="background-color:red;">Red button</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">
+      <img src="https://wallpapercave.com/wp/YKJtSPc.jpg">
+      <div><h1 class="column-2-header">Left Column</h1></div>
+      <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+    </div>
+    <div class="col-2">
+      <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
+      <div><h1 class="column-2-header">Right Column</h1></div>
+      <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+      </div>
+      <div>
+        <button class="column-button column2">Read More Button</button>
+      </div>
+    </div>
+   </div>
 </body>
 </html>
