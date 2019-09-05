@@ -62,6 +62,14 @@
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 601px){
+  .row .col-3 {
+    width: 48%;
+    float: left;
+  }
+
+}
+
 @media screen and (min-width: 600px) {
   .dropdown {display: none;}
   .dropdown .dropbutton {display: none;}
@@ -120,15 +128,24 @@
 
 }
 
-body, html {
-  height: 100%;
-}
-
 .parallax {
   background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
 
-  height: 100%;
+  height: 300px;
 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px
+}
+
+.parallax-bottom {
+  background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
+  /* background-color:gray; */
+  display:inline-block;
+  height: 300px;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,9 +156,34 @@ body, html {
 .centered {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 150px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-150px, -50%);
+}
+
+.parallax-bottom .centered-bottom {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  transform: translate(0px, -50%);
+  }
+
+.centered-bottom h1{
+  color: #fff;
+  font-size: 36px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px #aaa;
+  margin-bottom: 20px;
+
+}
+
+.centered-bottom h2{
+  color: #fff;
+  font-size: 18px;
+  text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .centered h1{
@@ -170,6 +212,8 @@ body, html {
 
 .col-1 {width: 31%;}
 .col-2 {width: 48%;}
+.col-3 {width: 23%;}
+.col-4 {width: 100%;}
 
 img {
   width: 100%;
@@ -245,49 +289,108 @@ img {
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-1">
-      <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
-      <div><h1 class="column-header" style="color:green;">Green Header</h1></div>
-      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-      <div>
-      <button class="column-button" style="background-color:green;">Green button</button>
+  <div>
+    <div class="row">
+      <div class="col-1">
+        <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+        <div><h1 class="column-header" style="color:green;">Green Header</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+        <div>
+        <button class="column-button" style="background-color:green;">Green button</button>
+        </div>
+      </div>
+
+      <div class="col-1">
+        <img src="http://h2oviva.com.br/wp-content/uploads/2019/03/badgleys-landscape-snohomish.jpg">
+        <div><h1 class="column-header" style="color:blue;">Blue Header</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+        <div>
+          <button class="column-button" style="background-color:blue;">Blue button</button>
+        </div>
+      </div>
+      <div class="col-1">
+        <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
+        <div><h1 class="column-header" style="color:red;">Red Header</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+        <div>
+          <button class="column-button" style="background-color:red;">Red button</button>
+        </div>
       </div>
     </div>
 
-    <div class="col-1">
-      <img src="http://h2oviva.com.br/wp-content/uploads/2019/03/badgleys-landscape-snohomish.jpg">
-      <div><h1 class="column-header" style="color:blue;">Blue Header</h1></div>
-      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-      <div>
-        <button class="column-button" style="background-color:blue;">Blue button</button>
+    <div class="row">
+      <div class="col-2">
+        <img src="https://wallpapercave.com/wp/YKJtSPc.jpg">
+        <div><h1 class="column-2-header">Left Column</h1></div>
+        <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
       </div>
-    </div>
-    <div class="col-1">
-      <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
-      <div><h1 class="column-header" style="color:red;">Red Header</h1></div>
-      <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-      <div>
-        <button class="column-button" style="background-color:red;">Red button</button>
+      <div class="col-2">
+        <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
+        <div><h1 class="column-2-header">Right Column</h1></div>
+        <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+        </div>
+        <div>
+          <button class="column-button column2">Read More Button</button>
+        </div>
       </div>
     </div>
   </div>
+  <section>
+    <div class="parallax-bottom" style="height:200px;">
+      <div class="centered-bottom">
+        <h1>Our services</h1>
+        <h2>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
+felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
+Etiam a mi quis arcu varius condimentum.</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-3">
+        <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+        <div><h1 class="column-header">Column One</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+      </div>
 
-  <div class="row">
-    <div class="col-2">
-      <img src="https://wallpapercave.com/wp/YKJtSPc.jpg">
-      <div><h1 class="column-2-header">Left Column</h1></div>
-      <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
-    </div>
-    <div class="col-2">
-      <img src="http://getwallpapers.com/wallpaper/full/a/3/5/39226.jpg">
-      <div><h1 class="column-2-header">Right Column</h1></div>
-      <div class="column-2-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.<br><br>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+      <div class="col-3">
+        <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+        <div><h1 class="column-header">Column Two</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+        <div>
+        <button class="column-button" style="background-color:light-gray;">Read It</button>
+        </div>
       </div>
-      <div>
-        <button class="column-button column2">Read More Button</button>
+
+      <div class="col-3">
+        <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+        <div><h1 class="column-header">Column Three</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+      </div>
+
+      <div class="col-3">
+        <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+        <div><h1 class="column-header">Column Four</h1></div>
+        <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+        <div>
+        <button class="column-button" style="background-color:light-gray">Details</button>
+        </div>
       </div>
     </div>
-   </div>
+  </section>
+
+  <section>
+    <div class="row">
+        <div class="col-4">
+          <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
+          <div><h1 class="column-header">One Big Column</h1></div>
+          <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
+          <div>
+          <button class="column-button" style="background-color:light-gray;float:left;margin-left:10px;">Read More</button>
+          </div>
+      </div>
+
+    </div>
+  </section>
 </body>
 </html>
