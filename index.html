@@ -34,6 +34,35 @@
 
 }
 
+.parallax-bottom {
+  background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
+  display:inline-block;
+  height: 400px;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px
+}
+
+.form-button{
+	float: left;
+	
+	width: 100px;
+}
+
+.full-col{
+	float: left;
+	width: 100%;
+	margin-top: 6px;	
+}
+
+.half-col{
+	float: left;
+	width: 50%;
+	margin-top: 6px; 
+}
 
 
 @media screen and (max-width: 600px) {
@@ -59,6 +88,22 @@
   .row [class*="col-"] {
     width: 100%;
     float: left;
+  }
+
+  .bigcol {
+  	padding: 10px;
+  }
+
+  .parallax-bottom{
+  	height: 700px;
+  }
+
+  .parallax-bottom .half-col{
+  	width: 100%;
+  }
+
+  .parallax-bottom .full-col{
+  	text-align: center;
   }
 }
 
@@ -128,24 +173,15 @@
 
 }
 
+.bigcol{
+	padding: 100px;
+}
+
 .parallax {
   background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
 
   height: 300px;
 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 10px
-}
-
-.parallax-bottom {
-  background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
-  /* background-color:gray; */
-  display:inline-block;
-  height: 300px;
-  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,6 +251,24 @@
 .col-3 {width: 23%;}
 .col-4 {width: 100%;}
 
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-100 {
+	float: left;
+	width: 100%;
+	margin-top: 6px;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -262,6 +316,16 @@ img {
   text-align: center;
   font-size: 18px;
 }
+
+.form-element{
+	background-color: rgba(242,242,242,0.6);
+	border: none;
+	border-radius: 2px;
+	width: 80%;
+	height: 30px;
+	margin-top: 10px;
+}
+
 
 
 </style>
@@ -380,7 +444,7 @@ Etiam a mi quis arcu varius condimentum.</h2>
   </section>
 
   <section>
-    <div class="row">
+    <div class="row bigcol">
         <div class="col-4" style="max-width: 100%;height: auto;">
           <img src="https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg">
           <div><h1 class="column-header">One Big Column</h1></div>
@@ -390,6 +454,39 @@ Etiam a mi quis arcu varius condimentum.</h2>
           </div>
       </div>
 
+    </div>
+  </section>
+
+  <section>
+  	<div class="parallax-bottom">
+      <div class="centered-bottom">
+        <form>
+        	<div>
+        		<h1>Contact</h1>
+        	</div>
+        	<div class="row full-col" style="margin-left: 10px;padding-right: 20px;">
+        		<p style="background-color: rgba(242,242,242,0.4);border-radius: 5px;">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+				</p>
+        	</div>
+        	<div class="row half-col">
+        		<div class="full-col">
+        			<input  class="form-element" type="text" id="name" name="name" placeholder="Name">
+        		</div>
+        		<div class="full-col">
+					<input class="form-element" type="text" id="email" name="email" placeholder="E-mail">
+        		</div>
+        		<div class="full-col">
+        			<input class="form-element" type="subject" id="subject" name="subject" placeholder="Subject">
+        		</div>
+        	</div>
+			<div class="row half-col">
+    			<div class="full-col" style="text-align: left">
+        			<textarea class="form-element" id="subject" name="subject" placeholder="Write something.." style="height:120px"></textarea>
+        			<button class="form-button" type="submit" class="btn btn-default">Send</button>
+			    </div>
+    		</div>	
+        </form>
+      </div>
     </div>
   </section>
 </body>
