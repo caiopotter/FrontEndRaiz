@@ -167,15 +167,14 @@
 }
 
 .dropdown {
-  position: relative;
+  position: fixed;
   float: right;
   top: 0;
+  width: 100%;
+  z-index: 10;
 
 }
 
-.bigcol{
-	padding: 100px;
-}
 
 .parallax {
   background-image: url('https://wallpapercave.com/wp/jiJZXEJ.jpg');
@@ -332,21 +331,21 @@ img {
 </head>
 <body>
   <div class="navbar">
-    <a href="#">News</a>
-    <a href="#">Contact</a>
-    <a href="#">About</a>
+    <a href="#section1">Head</a>
+    <a href="#section2">Our Services</a>
+    <a href="#section3">Contact</a>
   </div>
 
   <div class="dropdown">
     <button class="dropbutton"><i class="material-icons">list</i></button>
       <div class="drop-content">
-        <a href="#">News</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
+        <a href="#section1">Head</a>
+        <a href="#section2">Our Services</a>
+        <a href="#section3">Contact</a>
       </div>
   </div>
 
-  <div class="parallax">
+  <div class="parallax" id="section1">
     <div class="centered">
       <h1>Conquer</h1>
       <h2>Simple NO-Bootstrap Template</h2>
@@ -400,7 +399,7 @@ img {
     </div>
   </div>
   <section>
-    <div class="parallax-bottom" style="height:200px;">
+    <div class="parallax-bottom" style="height:200px;" id="section2">
       <div class="centered-bottom">
         <h1>Our services</h1>
         <h2>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
@@ -422,7 +421,7 @@ Etiam a mi quis arcu varius condimentum.</h2>
         <div><h1 class="column-header">Column Two</h1></div>
         <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
         <div>
-        <button class="column-button" style="background-color:light-gray;">Read It</button>
+        <button class="column-button" style="background-color:lightgray;">Read It</button>
         </div>
       </div>
 
@@ -437,7 +436,7 @@ Etiam a mi quis arcu varius condimentum.</h2>
         <div><h1 class="column-header">Column Four</h1></div>
         <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
         <div>
-        <button class="column-button" style="background-color:light-gray">Details</button>
+        <button class="column-button" style="background-color:lightgray">Details</button>
         </div>
       </div>
     </div>
@@ -450,7 +449,7 @@ Etiam a mi quis arcu varius condimentum.</h2>
           <div><h1 class="column-header">One Big Column</h1></div>
           <div class="column-text">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</div>
           <div>
-          <button class="column-button" style="background-color:light-gray;float:left;margin-left:10px;">Read More</button>
+          <button class="column-button" style="background-color:lightgray;float:left;margin-left:10px;">Read More</button>
           </div>
       </div>
 
@@ -458,7 +457,7 @@ Etiam a mi quis arcu varius condimentum.</h2>
   </section>
 
   <section>
-  	<div class="parallax-bottom">
+  	<div class="parallax-bottom" id="section3">
       <div class="centered-bottom">
         <form>
         	<div>
